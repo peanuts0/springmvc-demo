@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : com.peanut : springmvc-demo-1.0-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/springmvc-demo-1.0-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/springmvc-demo-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="springmvc-demo_main/web/Web Gradle : springmvc-demo-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="springmvc-demo_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.0.13" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.0.13" />
+          <element id="library" level="project" name="Gradle: org.slf4j:log4j-over-slf4j:1.7.5" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.5" />
+          <element id="library" level="project" name="Gradle: com.google.guava:guava:19.0" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/4.0.0/60200affc2fe0165136ed3690faf00b66aed581a/javax.servlet-api-4.0.0.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<property name="logPattern" value="%d{HH:mm:ss.SSS} %-5level [%thread] %logger{32}[%file:%line] -&gt; %msg%n"/>
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${logPattern}</pattern>
+			<charset class="java.nio.charset.Charset">utf8</charset>
+		</encoder>
+	</appender>
+
+	<!-- 文件输出日志 (文件大小策略进行文件输出，超过指定大小对文件备份)-->
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${logging.path}/application.log</File>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<FileNamePattern>${user.home}/logs/springmvc-demo/application_%d{yyyy-MM-dd}.log</FileNamePattern>
+			<!-- keep 5 days' worth of history -->
+			<maxHistory>5</maxHistory>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>${logPattern}</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 需要记录日志的包 -->
+	<logger name="com.peanut.mvc" level="DEBUG" />
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+
+</configuration>
