@@ -51,6 +51,7 @@ public class DispatchServlet extends HttpServlet {
             PrintWriter writer = resp.getWriter();
             writer.write(result);
             writer.flush();
+            return;
         }
 
 
@@ -61,6 +62,7 @@ public class DispatchServlet extends HttpServlet {
             PrintWriter writer = resp.getWriter();
             writer.write(result);
             writer.flush();
+            return;
         }
 
 
